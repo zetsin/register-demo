@@ -5,6 +5,8 @@ Hello! We are very happy to see that you have reached this challenge! The task r
 
 Solutions need to be provided as a bunch of files. For this task you may want to use some build tools, so we are expecting source code from you but not the minified output because the **code quality** is also important for us.
 
+Also we want to see how you use **Unit tests**. So please include Unit tests where they are meaningful for you.
+
 We wish you best of luck and hope you will have a nice time while solving this task!
 
 ## Make a registration form
@@ -16,10 +18,10 @@ Try to not spend more than 3 hours on this task.
 
 1. When a user opens a page he or she sees the following: ![first](https://user-images.githubusercontent.com/28978937/35049230-9c7774f2-fb9f-11e7-9b26-fcfce23a048e.png)
 
-2. The specific input data shall be validated once the user finishes his field input (onBlur validation) and once again for all data just before the submission of the form to the backend (validation rules - please see bellow). In case of validation errors a
+2. The specific input data shall be validated once the user finishes his field input (onBlur validation) and once again for for the submission of the form (validation rules - please see bellow). In case of validation errors a
 message shall be displayed next to the invalid field. ![second](https://user-images.githubusercontent.com/28978937/35049346-f9fd1410-fb9f-11e7-90fd-6df66d983dc7.png)
 
-3. The validated data should be simultaneously shown below in another component that you have created.
+3. The validated data (input data of the field) should be simultaneously shown below in another component that you have created.
 
 4. After submission a message should be shown (e.g. Congratz! All data is valid) and then be hidden again after 3 seconds!
 
@@ -32,7 +34,7 @@ message shall be displayed next to the invalid field. ![second](https://user-ima
 1. **firstName** - should contain only small and capital letters, no numbers, special characters, etc.
 1. **lastName** - same as the **firstName**
 1. **email** - must be a valid email address
-1. **iban** - must be a valid [IBAN](https://en.wikipedia.org/wiki/International_Bank_Account_Number). .
+1. **iban** - we want you to use asyncrhonouse validation. Also the user should have only 3 retries - then some cooldown - and then able to try again 3 times. Please use the small node server script that we provided you [IBAN](https://en.wikipedia.org/wiki/International_Bank_Account_Number). .
 
 ### Hints
 
