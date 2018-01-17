@@ -34,7 +34,7 @@ message shall be displayed next to the invalid field. ![second](https://user-ima
 1. **firstName** - should contain only small and capital letters, no numbers, special characters, etc.
 1. **lastName** - same as the **firstName**
 1. **email** - must be a valid email address
-1. **iban** - we want you to use asyncrhonouse validation. Also the user should have only 3 retries - then some cooldown - and then able to try again 3 times. Please use the small node server script that we provided you [IBAN](https://en.wikipedia.org/wiki/International_Bank_Account_Number). .
+1. **iban** - we want you to use asynchronous validation. Also the user should have only 3 retries - then some cooldown - and then able to try again 3 times. Please use the small node server script that we provided you [IBAN](https://en.wikipedia.org/wiki/International_Bank_Account_Number). .
 
 ### Hints
 
