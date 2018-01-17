@@ -16,10 +16,10 @@ Try to not spend more than 3 hours on this task.
 
 ### Technical description
 
-1. When a user opens a page he or she sees the following: ![first](https://user-images.githubusercontent.com/28978937/35049230-9c7774f2-fb9f-11e7-9b26-fcfce23a048e.png)
+1. When a user opens a page he or she sees the following: ![first](https://user-images.githubusercontent.com/28978937/35053398-487b06ce-fbaa-11e7-9ee1-999448945ce3.png)
 
 2. The specific input data shall be validated once the user finishes his field input (onBlur validation) and once again for for the submission of the form (validation rules - please see bellow). In case of validation errors a
-message shall be displayed next to the invalid field. ![second](https://user-images.githubusercontent.com/28978937/35049346-f9fd1410-fb9f-11e7-90fd-6df66d983dc7.png)
+message shall be displayed next to the invalid field. ![second](https://user-images.githubusercontent.com/28978937/35053395-46f695c0-fbaa-11e7-922a-dcfb87826f2c.png)
 
 3. The validated data (input data of the field) should be simultaneously shown below in another component that you have created.
 
