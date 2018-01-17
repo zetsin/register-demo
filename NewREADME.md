@@ -11,7 +11,7 @@ We wish you best of luck and hope you will have a nice time while solving this t
 
 ## Make a registration form
 
-We would kindly ask you to show us your ability to create a dynamic form. You are allowed to choose any library or framework that will help you to get the job done, although we would prefer to see you working with React.
+We would kindly ask you to show us your ability to create a form. You are allowed to choose any library or framework that will help you to get the job done, although we would prefer to see you working with React.
 Try to not spend more than 3 hours on this task. 
 
 ### Technical description
@@ -34,7 +34,7 @@ message shall be displayed next to the invalid field. ![second](https://user-ima
 1. **firstName** - should contain only small and capital letters, no numbers, special characters, etc.
 1. **lastName** - same as the **firstName**
 1. **email** - must be a valid email address
-1. **iban** - we want you to use asynchronous validation. Also the user should have only 3 retries - then some cooldown - and then able to try again 3 times. Please use the small node server script that we provided you [IBAN](https://en.wikipedia.org/wiki/International_Bank_Account_Number). .
+1. **iban** - we want you to use asynchronous validation. Also the user should have only 3 retries - then some cooldown - and then able to try again 3 times. The server handles the retry logic for you - you need to make it work in the frontend. Please use the small node server script that we provided you. What is IBAN? [IBAN] https://en.wikipedia.org/wiki/International_Bank_Account_Number).
 
 ### Hints
 
