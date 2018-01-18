@@ -11,7 +11,7 @@ We wish you best of luck and hope you will have a nice time while solving this t
 
 ## Make a registration form
 
-We would kindly ask you to show us your ability to create a form. You are allowed to choose any library or framework that will help you to get the job done, although we would prefer to see you working with React.
+We would kindly ask you to show us your ability to create a form. We are expecting a solution based on ReactJs/Redux libraries, written in ES6. In order to handle side-effects any library can be used (we would prefer the RxJs library).
 Try to not spend more than 3 hours on this task. 
 
 ### Technical description
@@ -23,7 +23,7 @@ message shall be displayed next to the invalid field. ![second](https://user-ima
 
 3. The validated data (input data of the field) should be simultaneously shown below in another component that you have created.
 
-4. After submission a message should be shown (e.g. Congratz! All data is valid) and then be hidden again after 3 seconds!
+4. After submission, a notification message should be spawned over the top of the form (e.g. Congratz! All data is valid) and then it should be hidden after 3 seconds!
 
 5. If the user has tried to submit invalid data first and fixed the validation errors afterwards, the whole data set should be validated again on submission.
 
@@ -34,7 +34,7 @@ message shall be displayed next to the invalid field. ![second](https://user-ima
 1. **firstName** - should contain only small and capital letters, no numbers, special characters, etc.
 1. **lastName** - same as the **firstName**
 1. **email** - must be a valid email address
-1. **iban** - we want you to use asynchronous validation. Also the user should have only 3 retries - then some cooldown - and then able to try again 3 times. The server handles the retry logic for you - you need to make it work in the frontend. Please use the small node server script that we provided you. What is IBAN? [IBAN] https://en.wikipedia.org/wiki/International_Bank_Account_Number).
+1. **iban** - we want you to use asynchronous validation. Also, the server is not stable - so it will fail from time-to-time. Please use the small node server script in order to validate IBAN. The server is running on port 3050. What is IBAN? [IBAN] https://en.wikipedia.org/wiki/International_Bank_Account_Number).
 
 ### Hints
 
@@ -47,3 +47,64 @@ You are not forced to use this hints but they will make this task easier for you
 - Don't make your files too long. If its too long you have poor architecture
 - Make sure your code is of high quality (linting)
 - Give us instructions how to start / install (Proper Readme.md)
+
+
+## Server
+
+```
+const express = require('express');
+const bodyParser = require('body-parser');
+const ibanLib = require('iban');
+
+const app = express();
+app.use(bodyParser.json());
+
+const router = express.Router();
+
+let count = 0;
+
+router.post('/', (req, res, next) => {
+    const { iban } = req.body;
+    try {
+        if (++count % 3 === 0) {
+            throw new Error('Service is not available');
+        }
+        if (!iban) {
+            return res.status(400).json({message: 'Body should contain iban field'})
+        }
+        const valid = ibanLib.isValid(iban);
+        res.json({ valid });
+    } catch (e) {
+        res.status(500).json({message: e.message || 'Something went wrong. Please, try again'});
+    }
+});
+
+app.use('/', router);
+
+app.listen(3050, (err) => {
+    if (err) {
+        throw err;
+    }
+    console.info('Server is listening on port 3050');
+});
+```
+
+#### Example package.json
+
+```
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Test server",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "iban": "^0.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  }
+}
+
