@@ -1,11 +1,11 @@
 
 # F1 - smava recruitment tasks for front-end developers
 
-Hello! We are very happy to see that you have reached this challenge! The task requires some creativity, we are giving you some description, which is very close to the stuff, that we are actually working in smava.
+Hello! We are very happy to see that you have reached this challenge! The task requires some creativity, we are giving you some description, which is very close to the stuff we do at smava.
 
 Solutions need to be provided as a bunch of files. For this task you may want to use some build tools, so we are expecting source code from you but not the minified output because the **code quality** is also important for us.
 
-Also we want to see how you use **Unit tests**. So please include Unit tests where they are meaningful for you.
+Also, we want to see how you use **Unit tests**. So please include Unit tests where they are meaningful for you.
 
 We wish you best of luck and hope you will have a nice time while solving this task!
 
@@ -18,10 +18,10 @@ Try to not spend more than 3 hours on this task.
 
 1. When a user opens a page he or she sees the following: ![first](https://user-images.githubusercontent.com/28978937/35053398-487b06ce-fbaa-11e7-9ee1-999448945ce3.png)
 
-2. The specific input data shall be validated once the user finishes his field input (onBlur validation) and once again for for the submission of the form (validation rules - please see bellow). In case of validation errors a
+2. The specific input data shall be validated when the field loses the focus and when the submit button is pressed as well (validation rules - please see bellow). In case of validation errors a
 message shall be displayed next to the invalid field. ![second](https://user-images.githubusercontent.com/28978937/35053395-46f695c0-fbaa-11e7-922a-dcfb87826f2c.png)
 
-3. The validated data (input data of the field) should be simultaneously shown below in another component that you have created.
+3. Add a new component below the form that will show the current content of all fields simultaneously as the fields are changed.
 
 4. After submission, a notification message should be spawned over the top of the form (e.g. Congratz! All data is valid) and then it should be hidden after 3 seconds!
 
