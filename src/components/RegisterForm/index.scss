@@ -1,0 +1,46 @@
+.register-form {
+  background: white;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 600px;
+
+  h1 {
+    text-align: center;
+  }
+
+  form {
+
+    >div {
+      margin: 20px 5px;
+
+      >label {
+        font-weight: 700;
+        min-width: 150px;
+        padding: 6px 0;
+      }
+
+      >div {
+
+        >input {
+          font-size: 16px;
+          padding: 5px 8px;
+          border: 1px solid #ccc;
+          width: 100%;
+        }
+        >span {
+          font-size: 12px;
+          color: red;
+        }
+      }
+    }
+
+    >div.buttons {
+      float: right;
+
+      >button {
+        background: orange;
+        color: white;
+      }
+    }
+  }
+}
