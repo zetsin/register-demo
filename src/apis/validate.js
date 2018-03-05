@@ -1,5 +1,7 @@
+import config from '../config';
+
 export const iban = val => {
-  return fetch('http://localhost:3050', {
+  return fetch(config.api, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
