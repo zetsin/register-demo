@@ -12,7 +12,7 @@ yarn
 yarn serve
 ```
 
-3.  run the client in developing mode, from the other terminal
+3.  run the client in developing mode, from the other terminal, then the page will be opened in http://localhost:3000/
 
 ```
 yarn start
@@ -24,7 +24,7 @@ yarn start
 yarn test
 ```
 
-> Actually I almost spent around 4 hours on it, because I'm the beginner of react-form, and I use the original structure of create-react-app-redux instead of what I used to use, as what you suggest.
+> Actually I almost spent around 4 hours on it, because I'm the beginner of react-form, and I use the original redux flow created by create-react-app-redux instead of what I used to use, as what you suggest.
 
 ---
 
